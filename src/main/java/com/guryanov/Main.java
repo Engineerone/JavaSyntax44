@@ -37,7 +37,7 @@ class myFigure extends Figure implements Drawable {
     figureType type;
 
     myFigure(double figureSide1, double figureSide2, String figureColor) throws ArithmeticException {
-        if (figureSide1 == 0 | figureSide2 == 0)
+        if (figureSide1 <=0 || figureSide2 <= 0)
             throw new ArithmeticException();
         this.figureSide1 = figureSide1;
         this.figureSide2 = figureSide2;
@@ -122,7 +122,7 @@ class myFigure extends Figure implements Drawable {
 public class Main {
     public static void main(String[] args) {
         try {
-            Drawable figure = new myFigure(1, 10, "CYAN");
+            Drawable figure = new myFigure(1, 10, "PURPLE");
             figure.drow();
         } catch (ArithmeticException e) {
             System.out.println("Размер фигуры не определен");
