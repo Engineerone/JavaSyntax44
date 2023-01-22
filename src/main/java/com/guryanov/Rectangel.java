@@ -9,7 +9,7 @@ class Rectangle {
         this.figureSide2 = figureSide2;
     }
 
-     figureType checkFigureType() {
+    figureType checkFigureType() {
         if (figureSide1 == figureSide2) return figureType.Square;
         return figureType.Rectangle;
     }

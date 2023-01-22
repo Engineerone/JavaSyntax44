@@ -7,7 +7,7 @@ class myFigure extends Figure implements Drawable {
     figureType type;
 
     myFigure(double figureSide1, double figureSide2, String figureColor) throws ArithmeticException {
-        if (figureSide1 <=0 || figureSide2 <= 0)
+        if (figureSide1 <= 0 || figureSide2 <= 0)
             throw new ArithmeticException();
         this.figureSide1 = figureSide1;
         this.figureSide2 = figureSide2;
@@ -54,10 +54,8 @@ class myFigure extends Figure implements Drawable {
         figureSide1 = figureSide1 + 2;
         String[][] figureDrowAarray = new String[(int) figureSide1][(int) figureSide2];
 
-
         for (int i = 0; i < figureSide1; i++) {
             for (int j = 0; j < figureSide2; j++)
-
                 if (i == 0 | i == figureSide1 - 1)
                     figureDrowAarray[i][j] = "-";
                 else if (j == 0 | j == figureSide2 - 1)
@@ -71,14 +69,12 @@ class myFigure extends Figure implements Drawable {
                 if (i == ((int) figureSide1 / 2) & j == figureSide2 - 1)
                     System.out.print(figureDrowAarray[i][j] + "Цвет фигуры: " + figureColor + " Размер: " + (figureSide1 - 2) + " х " + figureSide2);
                 else System.out.print(figureDrowAarray[i][j]);
-
             }
             System.out.println();
         }
     }
 
     public void drow() {
-
         System.out.println("Фигура является: " + type);
         System.out.println("Размер сторооны 1: " + figureSide1);
         System.out.println("Размер сторооны 2: " + figureSide2);
