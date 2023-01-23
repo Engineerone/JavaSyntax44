@@ -6,6 +6,7 @@ class myFigure extends Figure implements Drawable {
     double figureSide2;
     figureType type;
 
+
     myFigure(double figureSide1, double figureSide2, String figureColor) throws ArithmeticException {
         if (figureSide1 <= 0 || figureSide2 <= 0)
             throw new ArithmeticException();
